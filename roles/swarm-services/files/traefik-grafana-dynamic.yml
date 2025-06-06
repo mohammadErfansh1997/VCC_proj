@@ -1,0 +1,15 @@
+
+http:
+  routers:
+    grafana:
+      rule: "Host(`grafana.vcc.internal`) && (PathPrefix(`/`) || PathPrefix(`/login`))"
+      entryPoints:
+        - websecure
+      service: grafana
+      tls: {}
+
+  services:
+    grafana:
+      loadBalancer:
+        servers:
+          - url: "http://grafana:3000"

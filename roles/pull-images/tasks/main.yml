@@ -1,0 +1,7 @@
+---
+- name: Repull images
+  ansible.builtin.command:
+    cmd: python3 /vagrant/roles/pull-images/files/repull_images.py
+  args:
+    chdir: /vagrant/roles/pull-images/files/
+  become: true

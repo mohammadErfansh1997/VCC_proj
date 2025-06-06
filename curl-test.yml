@@ -1,0 +1,15 @@
+version: "3.8"
+
+services:
+  curl-test:
+    image: alpine
+    command: sleep 3000
+    networks:
+      - vcc_traefik_net
+      - vcc_postgres_net
+
+networks:
+  vcc_traefik_net:
+    external: true
+  vcc_postgres_net:
+    external: true

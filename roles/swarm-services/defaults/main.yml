@@ -1,0 +1,19 @@
+
+stack_data_directories:
+  - dex
+  - forgejo
+  - loki
+  - prometheus
+  - grafana
+  - certs/traefik
+  - postgres
+  - traefik
+
+stack_nuke_data_directories: true
+stack_file_names:
+  - exam.yml
+  - logging_demo.yml
+  - metrics_demo.yml
+  
+stack_recreate: true
+stack_repull_images: true
