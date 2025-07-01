@@ -1,4 +1,0 @@
----
-swarm_build_images:
-  - forgejo
-  - sample
